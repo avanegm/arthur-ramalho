@@ -1694,3 +1694,124 @@ h2 em {
   .hero-highlights { margin-top: 205px; gap: 8px; }
   .hero-highlight span { font-size: 8px; }
 }
+
+/* ===== Refinamento do Hero mobile: menos vazio e retrato bem posicionado ===== */
+@media (max-width: 760px) {
+  .hero {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  /* Aproxima o conteúdo do cabeçalho */
+  .hero-content {
+    padding-top: 24px;
+    padding-bottom: 22px;
+  }
+
+  .hero-copy {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-copy > .section-eyebrow {
+    margin-top: 0;
+  }
+
+  .hero h1 {
+    margin-top: 14px;
+    margin-bottom: 14px;
+    font-size: clamp(40px, 10.7vw, 57px);
+    line-height: .98;
+  }
+
+  .hero-description {
+    margin-top: 14px;
+    margin-bottom: 19px;
+    max-width: 390px;
+    font-size: 13px;
+    line-height: 1.65;
+  }
+
+  .hero-cta {
+    position: relative;
+    z-index: 4;
+    max-width: 100%;
+  }
+
+  /* O retrato ganha presença, sem ficar atrás dos textos nem dos diferenciais */
+  .hero-portrait {
+    top: 495px;
+    right: -12px;
+    bottom: auto;
+    width: min(100%, 430px);
+    height: 390px;
+    opacity: 1;
+    z-index: 1;
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.35) 8%, #000 25%);
+    mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.35) 8%, #000 25%);
+  }
+
+  .hero-portrait-frame {
+    width: 78%;
+    height: 88%;
+    bottom: 0;
+    border-bottom: 0;
+  }
+
+  .hero-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom right;
+  }
+
+  /* Reserva o espaço do retrato e posiciona os três itens abaixo dele */
+  .hero-highlights {
+    position: relative;
+    z-index: 3;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 390px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255,255,255,.14);
+  }
+
+  .hero-highlight {
+    min-width: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+  }
+
+  .hero-highlight svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .hero-highlight span {
+    font-size: 9px;
+    line-height: 1.45;
+  }
+
+  .hero-scroll {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    margin-top: 20px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,.1);
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-content { padding-top: 20px; }
+  .hero h1 { font-size: 39px; }
+  .hero-portrait {
+    top: 510px;
+    right: -24px;
+    width: 106%;
+    height: 355px;
+  }
+  .hero-highlights { margin-top: 355px; gap: 8px; }
+  .hero-highlight span { font-size: 8px; }
+}
