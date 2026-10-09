@@ -1740,15 +1740,16 @@ h2 em {
 
   /* O retrato ganha presença, sem ficar atrás dos textos nem dos diferenciais */
   .hero-portrait {
-    top: 495px;
+    /* Começa logo após a chamada principal, preenchendo o espaço sem criar um vão */
+    top: 365px;
     right: -12px;
     bottom: auto;
-    width: min(100%, 430px);
-    height: 390px;
+    width: min(100%, 450px);
+    height: 430px;
     opacity: 1;
     z-index: 1;
-    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.35) 8%, #000 25%);
-    mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.35) 8%, #000 25%);
+    -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.25) 7%, #000 22%);
+    mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,.25) 7%, #000 22%);
   }
 
   .hero-portrait-frame {
@@ -1765,15 +1766,16 @@ h2 em {
     object-position: bottom right;
   }
 
-  /* Reserva o espaço do retrato e posiciona os três itens abaixo dele */
+  /* Mantém os diferenciais depois do retrato, sem sobrepor a pessoa */
   .hero-highlights {
     position: relative;
     z-index: 3;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 10px;
-    margin-top: 390px;
+    margin-top: 535px;
     padding-top: 18px;
     border-top: 1px solid rgba(255,255,255,.14);
+    background: linear-gradient(180deg, rgba(4,16,27,.92), #04101b 42%);
   }
 
   .hero-highlight {
@@ -1804,14 +1806,14 @@ h2 em {
 }
 
 @media (max-width: 380px) {
-  .hero-content { padding-top: 20px; }
+  .hero-content { padding-top: 16px; }
   .hero h1 { font-size: 39px; }
   .hero-portrait {
-    top: 510px;
+    top: 355px;
     right: -24px;
-    width: 106%;
-    height: 355px;
+    width: 108%;
+    height: 390px;
   }
-  .hero-highlights { margin-top: 355px; gap: 8px; }
+  .hero-highlights { margin-top: 505px; gap: 8px; }
   .hero-highlight span { font-size: 8px; }
 }
