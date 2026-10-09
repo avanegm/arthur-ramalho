@@ -145,7 +145,7 @@ export default function App() {
         <div className="hero-content page-width">
           <div className="hero-copy">
             <SectionEyebrow>Sorocaba e região</SectionEyebrow>
-            <h1>Direito com<em>propósito e estratégia.</em></h1>
+            <h1>Direito com propósito e estratégia para <em>pessoas e empresas.</em></h1>
             <p className="hero-description">
               Advocacia e consultoria jurídica com análise técnica, compromisso e soluções adequadas à realidade de cada cliente.
             </p>
@@ -189,26 +189,27 @@ export default function App() {
             <p>
               Possui experiências relacionadas ao Direito Bancário em defesa do consumidor, Recuperação de Crédito, Direito do Trabalho — tanto pela parte reclamante quanto pela reclamada — e Transações Tributárias, com foco em uma atuação técnica, responsável e atenta às particularidades de cada demanda.
             </p>
-            <div className="credentials">
+            <div className="credentials" aria-label="Formação acadêmica e complementar">
               <div className="credential">
-                <GraduationCap size={25} strokeWidth={1.35} />
-                <span>Graduado em Direito<br /><strong>FADI · 2026</strong></span>
+                <span className="credential-icon"><GraduationCap size={25} strokeWidth={1.35} /></span>
+                <span className="credential-copy"><small>Graduação</small><strong>Direito</strong><span>FADI · 2026</span></span>
               </div>
               <div className="credential">
-                <BookOpen size={24} strokeWidth={1.35} />
-                <span>Pós-graduação em andamento<br /><strong>Processo do Trabalho · EPD</strong></span>
+                <span className="credential-icon"><BookOpen size={24} strokeWidth={1.35} /></span>
+                <span className="credential-copy"><small>Pós-graduação em andamento</small><strong>Processo do Trabalho</strong><span>Escola Paulista de Direito (EPD)</span></span>
               </div>
               <div className="credential">
-                <Check size={23} strokeWidth={1.45} />
-                <span>Formação complementar<br /><strong>Cursos ao longo da graduação</strong></span>
+                <span className="credential-icon"><Check size={23} strokeWidth={1.45} /></span>
+                <span className="credential-copy"><small>Formação complementar</small><strong>Cursos ao longo da graduação</strong><span>Aprimoramento contínuo</span></span>
               </div>
             </div>
           </div>
           <div className="about-visual">
             <img src="/images/office-detail.jpg" alt="Ambiente de trabalho com livros jurídicos e mesa de escritório" loading="lazy" />
+            <div className="about-visual-shade" aria-hidden="true" />
             <div className="about-quote">
               <span className="quote-mark" aria-hidden="true">“</span>
-              <p>Cada demanda merece uma análise cuidadosa, com estratégia e responsabilidade.</p>
+              <p>Cada demanda merece uma análise cuidadosa, com <em>estratégia e responsabilidade.</em></p>
               <span className="quote-rule" />
             </div>
             <div className="visual-caption"><span>01</span><span>Conhecimento aplicado à realidade</span></div>
