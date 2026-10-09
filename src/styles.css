@@ -2159,7 +2159,6 @@ h2 em {
   }
 }
 
-
 /* Refinamento da seção Áreas de Atuação: hierarquia, cards e espaçamento */
 .practice {
   padding-top: 48px;
@@ -2232,8 +2231,6 @@ h2 em {
 }
 
 @media (max-width: 760px) {
-  .about { padding-bottom: 0 !important; }
-
   .practice {
     margin-top: 0;
     padding: 28px 0 42px !important;
