@@ -271,7 +271,6 @@ export default function App() {
       <footer className="site-footer">
         <div className="footer-main page-width">
           <Brand />
-          <p>Advocacia e consultoria jurídica<br />com seriedade, estratégia e responsabilidade.</p>
           <a href="#inicio" className="back-to-top">Voltar ao início <ArrowUpRight size={16} /></a>
         </div>
         <div className="footer-bottom page-width">

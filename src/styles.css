@@ -2412,104 +2412,64 @@ h2 em {
 }
 
 
+/* AJUSTES FINAIS — somente cartões de atuação, contato e cabeçalho fixo */
 
-/* =========================================
-   CONTATO + RODAPÉ — COMPOSIÇÃO UNIFICADA
-   Escopo restrito às seções finais do site.
-========================================= */
-.contact {
-  padding: 48px 0 34px;
-  background: #06111c;
+/* Mantém a navegação visível durante a rolagem da página. */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(7, 21, 34, .96);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .08);
 }
 
-.contact::before {
-  background: linear-gradient(
-    90deg,
-    rgba(4, 16, 27, .98) 0%,
-    rgba(4, 16, 27, .94) 56%,
-    rgba(4, 16, 27, .72) 100%
-  );
+/* Compensa a altura do cabeçalho agora fixo, sem mudar a composição do Hero. */
+.hero {
+  padding-top: 96px;
 }
 
-.contact-inner {
-  gap: clamp(38px, 6vw, 90px);
-}
-
-.contact-copy h2 {
-  margin-top: 15px;
-}
-
-.contact-hint {
-  display: none;
-}
-
-.contact-details {
-  gap: 19px 30px;
-}
-
-.site-footer {
-  background: #06111c;
-  border-top: 1px solid rgba(208, 161, 94, .22);
-}
-
-.footer-main {
-  min-height: 0;
-  padding-top: 25px;
-  padding-bottom: 24px;
-}
-
-.footer-bottom {
-  min-height: 48px;
-  padding-block: 13px;
-}
-
+/* Remove o espaço reservado à numeração e mantém o ícone no canto superior direito. */
 @media (max-width: 760px) {
-  .contact {
-    padding: 38px 0 30px;
+  .hero {
+    padding-top: 78px;
   }
 
-  .contact-inner {
-    gap: 24px;
+  .practice .practice-card,
+  .practice .practice-card:nth-child(even) {
+    position: relative;
+    padding: 20px 19px 16px;
   }
 
-  .contact-copy h2 {
-    margin-top: 14px;
-    margin-bottom: 14px;
-  }
-
-  .contact-copy > p {
-    line-height: 1.65;
-  }
-
-  .contact-details {
-    gap: 17px;
-  }
-
-  .site-footer {
-    border-top-color: rgba(208, 161, 94, .25);
-  }
-
-  .footer-main {
-    gap: 16px;
-    padding-top: 23px;
-    padding-bottom: 22px;
-  }
-
-  .footer-bottom {
+  .practice .practice-card .card-topline {
+    position: absolute;
+    top: 16px;
+    right: 16px;
     min-height: 0;
-    padding-top: 14px;
-    padding-bottom: 15px;
+    height: 42px;
+    margin: 0;
+  }
+
+  .practice .practice-card h3 {
+    margin: 0 48px 9px 0;
+    padding-top: 3px;
+  }
+
+  /* Cria distância entre o botão de WhatsApp e os dados de contato. */
+  .contact-actions > .button {
+    margin-bottom: 18px;
+  }
+
+  .contact-actions {
+    padding-top: 0;
   }
 }
 
-@media (max-width: 380px) {
-  .contact {
-    padding-top: 32px;
-    padding-bottom: 25px;
-  }
-
-  .footer-main {
-    padding-top: 20px;
-    padding-bottom: 19px;
+@media (min-width: 761px) {
+  .contact-actions > .button {
+    margin-bottom: 18px;
   }
 }
