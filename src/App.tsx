@@ -54,7 +54,6 @@ const navigation = [
   { label: 'Início', href: '#inicio' },
   { label: 'Sobre', href: '#sobre' },
   { label: 'Áreas de atuação', href: '#atuacao' },
-  { label: 'Diferenciais', href: '#diferenciais' },
   { label: 'Contato', href: '#contato' },
 ];
 
@@ -144,15 +143,6 @@ export default function App() {
         </header>
 
         <div className="hero-content page-width">
-          <div className="hero-portrait" aria-hidden="true">
-            <div className="hero-portrait-frame" />
-
-            <img
-              src="/images/arthur-portrait.png"
-              alt=""
-            />
-          </div>
-
           <div className="hero-copy">
             <SectionEyebrow>Sorocaba e região</SectionEyebrow>
             <h1>Direito com propósito e estratégia para <em>pessoas e empresas.</em></h1>
@@ -160,21 +150,28 @@ export default function App() {
               Advocacia e consultoria jurídica com análise técnica, compromisso e soluções adequadas à realidade de cada cliente.
             </p>
             <WhatsAppCta className="hero-cta" label="Falar agora no WhatsApp" />
-            <div className="hero-highlights" aria-label="Informações de atendimento">
-              <div className="hero-highlight">
-                <ShieldCheck size={27} strokeWidth={1.25} />
-                <span>Atendimento<br /><strong>em Sorocaba e região</strong></span>
-              </div>
-              <div className="hero-highlight">
-                <UsersRound size={27} strokeWidth={1.25} />
-                <span>Pessoas físicas<br /><strong>e empresas</strong></span>
-              </div>
-              <div className="hero-highlight">
-                <BriefcaseBusiness size={26} strokeWidth={1.25} />
-                <span>Análise técnica<br /><strong>e individualizada</strong></span>
-              </div>
+          </div>
+
+          <div className="hero-portrait" aria-hidden="true">
+            <div className="hero-portrait-frame" />
+            <img src="/images/arthur-portrait.png" alt="" />
+          </div>
+
+          <div className="hero-highlights" aria-label="Informações de atendimento">
+            <div className="hero-highlight">
+              <ShieldCheck size={27} strokeWidth={1.25} />
+              <span>Atendimento<br /><strong>em Sorocaba e região</strong></span>
+            </div>
+            <div className="hero-highlight">
+              <UsersRound size={27} strokeWidth={1.25} />
+              <span>Pessoas físicas<br /><strong>e empresas</strong></span>
+            </div>
+            <div className="hero-highlight">
+              <BriefcaseBusiness size={26} strokeWidth={1.25} />
+              <span>Análise técnica<br /><strong>e individualizada</strong></span>
             </div>
           </div>
+
           <a className="hero-scroll" href="#sobre" aria-label="Conheça o profissional">
             <span>Conheça o profissional</span><ArrowDownRight size={16} />
           </a>
@@ -230,7 +227,7 @@ export default function App() {
           </div>
           <div className="practice-grid">
             {practiceAreas.map(({ number, title, description, Icon }) => (
-              <article className="practice-card" key={title}>
+              <article className="practice-card" key={number}>
                 <div className="card-topline"><span>{number}</span><Icon size={27} strokeWidth={1.35} /></div>
                 <h3>{title}</h3>
                 <p>{description}</p>
@@ -241,58 +238,6 @@ export default function App() {
             ))}
           </div>
           <p className="practice-note">A atuação em cada matéria será avaliada de acordo com as características e necessidades específicas da demanda.</p>
-        </div>
-      </section>
-
-      <section className="differentials section-light" id="diferenciais">
-        <div className="page-width differentials-inner">
-          <div className="differentials-heading">
-            <SectionEyebrow>Diferenciais</SectionEyebrow>
-            <h2>Uma atuação jurídica <em>atenta à sua realidade.</em></h2>
-            <p>Cada situação tem suas particularidades. O primeiro passo é compreender a demanda para avaliar os caminhos jurídicos possíveis.</p>
-          </div>
-          <div className="differentials-list">
-            <article className="differential-item">
-              <span className="differential-icon"><UsersRound size={23} strokeWidth={1.4} /></span>
-              <div><h3>Atendimento próximo</h3><p>Escuta atenta e comunicação clara ao longo do atendimento.</p></div>
-            </article>
-            <article className="differential-item">
-              <span className="differential-icon"><BookOpen size={23} strokeWidth={1.4} /></span>
-              <div><h3>Análise técnica</h3><p>Estudo das informações e dos aspectos jurídicos de cada demanda.</p></div>
-            </article>
-            <article className="differential-item">
-              <span className="differential-icon"><ShieldCheck size={23} strokeWidth={1.4} /></span>
-              <div><h3>Ética e responsabilidade</h3><p>Atuação pautada pela responsabilidade profissional e pelo respeito ao cliente.</p></div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section className="faq section-light" id="duvidas">
-        <div className="page-width faq-inner">
-          <div className="faq-heading">
-            <SectionEyebrow>Dúvidas frequentes</SectionEyebrow>
-            <h2>Antes de <em>entrar em contato.</em></h2>
-            <p>Algumas informações para ajudar você a iniciar uma conversa.</p>
-          </div>
-          <div className="faq-list">
-            <details className="faq-item">
-              <summary>Como funciona o primeiro contato?</summary>
-              <p>Você pode apresentar brevemente sua situação pelo WhatsApp. As informações iniciais ajudam a compreender a demanda e avaliar os próximos passos.</p>
-            </details>
-            <details className="faq-item">
-              <summary>O atendimento é em Sorocaba?</summary>
-              <p>A atuação é direcionada a Sorocaba e região. A possibilidade e o formato de atendimento devem ser confirmados conforme a demanda.</p>
-            </details>
-            <details className="faq-item">
-              <summary>Quais documentos devo separar?</summary>
-              <p>Isso depende do assunto. No primeiro contato, descreva sua situação e será possível orientar quais informações ou documentos podem ser relevantes.</p>
-            </details>
-            <details className="faq-item">
-              <summary>O atendimento é para pessoas e empresas?</summary>
-              <p>O site apresenta áreas relacionadas a demandas de pessoas físicas e empresas. O enquadramento de cada caso será avaliado individualmente.</p>
-            </details>
-          </div>
         </div>
       </section>
 
