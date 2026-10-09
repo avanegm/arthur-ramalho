@@ -1885,3 +1885,225 @@ h2 em {
 @media (max-width: 380px) {
   .about-quote { bottom: 62px; }
 }
+
+
+/* Match the approved mobile About reference: credential panel blends into a shorter full-bleed image */
+@media (max-width: 760px) {
+  .about-copy {
+    position: relative;
+    z-index: 2;
+  }
+
+  .credentials {
+    position: relative;
+    z-index: 3;
+    margin-bottom: -10px;
+    background: rgba(250, 247, 241, .94);
+    border-color: rgba(24, 39, 52, .08);
+    box-shadow: 0 8px 24px rgba(4, 16, 27, .035);
+  }
+
+  .about-visual {
+    position: relative;
+    z-index: 1;
+    height: 360px;
+    margin-top: 0;
+    overflow: hidden;
+    background: var(--cream);
+  }
+
+  .about-visual > img {
+    object-position: center 57%;
+  }
+
+  .about-visual-shade {
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      var(--cream) 0%,
+      rgba(246, 242, 233, .9) 5%,
+      rgba(246, 242, 233, .55) 13%,
+      rgba(246, 242, 233, .14) 23%,
+      transparent 32%,
+      rgba(4, 16, 27, .18) 48%,
+      rgba(4, 16, 27, .94) 100%
+    );
+  }
+
+  .about-quote {
+    bottom: 56px;
+    right: 22px;
+    left: 22px;
+  }
+
+  .about-quote p {
+    font-size: clamp(23px, 6.1vw, 29px);
+    line-height: 1.08;
+  }
+
+  .visual-caption {
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 380px) {
+  .about-visual { height: 340px; }
+  .credentials { margin-bottom: -8px; padding-right: 14px; padding-left: 14px; }
+  .about-quote { bottom: 54px; right: 18px; left: 18px; }
+  .visual-caption { bottom: 18px; right: 18px; left: 18px; }
+}
+
+
+/* Ajuste final da seção Sobre conforme a referência aprovada: credenciais integradas à foto por degradê */
+@media (max-width: 760px) {
+  .about {
+    padding-top: 38px;
+    padding-bottom: 46px;
+    overflow: hidden;
+  }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+
+  .about-copy {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    z-index: 2;
+  }
+
+  .credentials {
+    position: relative;
+    z-index: 3;
+    margin-top: 22px;
+    margin-bottom: -34px;
+    padding: 16px 14px 18px;
+    border: 1px solid rgba(24, 39, 52, .07);
+    border-radius: 7px;
+    background: rgba(250, 247, 241, .97);
+    box-shadow: 0 8px 24px rgba(4, 16, 27, .035);
+  }
+
+  .credential {
+    gap: 13px;
+    padding: 13px 0;
+  }
+
+  .credential + .credential {
+    border-top: 1px solid rgba(24, 39, 52, .09);
+  }
+
+  .credential-icon {
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .credential-copy strong {
+    font-size: 15px;
+  }
+
+  .credential-copy small {
+    font-size: 8px;
+  }
+
+  .credential-copy > span {
+    font-size: 10px;
+  }
+
+  .about-visual {
+    position: relative;
+    z-index: 1;
+    width: calc(100% + 48px);
+    height: 390px;
+    min-height: 0;
+    margin: 0 -24px;
+    padding: 0;
+    overflow: hidden;
+    isolation: isolate;
+    background: var(--cream);
+  }
+
+  .about-visual > img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 56%;
+    filter: saturate(.82);
+  }
+
+  .about-visual-shade {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+      180deg,
+      rgba(246, 242, 233, .98) 0%,
+      rgba(246, 242, 233, .88) 9%,
+      rgba(246, 242, 233, .58) 19%,
+      rgba(246, 242, 233, .22) 30%,
+      rgba(246, 242, 233, 0) 40%,
+      rgba(4, 16, 27, .16) 52%,
+      rgba(4, 16, 27, .91) 100%
+    );
+  }
+
+  .about-quote {
+    z-index: 2;
+    right: 24px;
+    bottom: 52px;
+    left: 24px;
+    width: auto;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .quote-mark {
+    height: 24px;
+    font-size: 46px;
+  }
+
+  .about-quote p {
+    max-width: 430px;
+    margin: 8px 0 17px;
+    font-size: clamp(24px, 6.2vw, 30px);
+    line-height: 1.08;
+  }
+
+  .quote-rule {
+    width: 38px;
+  }
+
+  .visual-caption {
+    z-index: 2;
+    top: auto;
+    right: 24px;
+    bottom: 22px;
+    left: 24px;
+    gap: 12px;
+    color: rgba(250, 247, 242, .78);
+    font-size: 8px;
+    letter-spacing: .14em;
+  }
+
+  .practice {
+    padding-top: 44px;
+  }
+}
+
+@media (max-width: 380px) {
+  .about { padding-top: 32px; padding-bottom: 38px; }
+  .credentials { margin-bottom: -30px; padding-right: 12px; padding-left: 12px; }
+  .about-visual { height: 360px; }
+  .about-quote { right: 18px; bottom: 48px; left: 18px; }
+  .about-quote p { font-size: 23px; }
+  .visual-caption { right: 18px; bottom: 18px; left: 18px; font-size: 7px; }
+}
