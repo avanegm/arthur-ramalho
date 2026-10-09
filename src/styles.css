@@ -2377,3 +2377,36 @@ h2 em {
     margin-top: 9px;
   }
 }
+
+
+/* Ajuste final dos cartões: remove o espaço reservado à numeração.
+   Escopo exclusivo da seção Áreas de atuação. */
+.practice .practice-card {
+  padding-top: 18px;
+}
+
+.practice .practice-card .card-topline {
+  min-height: 0;
+  height: auto;
+  margin-bottom: 12px;
+}
+
+.practice .practice-card h3 {
+  margin-top: 0;
+}
+
+@media (max-width: 760px) {
+  .practice .practice-card,
+  .practice .practice-card:nth-child(even) {
+    padding-top: 17px;
+  }
+
+  .practice .practice-card .card-topline {
+    min-height: 0;
+    margin-bottom: 12px;
+  }
+
+  .practice .practice-card h3 {
+    margin-top: 0;
+  }
+}
