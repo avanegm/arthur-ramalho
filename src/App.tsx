@@ -248,11 +248,6 @@ export default function App() {
           </div>
           <div className="contact-actions">
             <WhatsAppCta label="Falar no WhatsApp" />
-            {siteConfig.whatsappNumber ? (
-              <p className="contact-hint">O primeiro contato pode ser feito diretamente pelo WhatsApp.</p>
-            ) : (
-              <p className="contact-hint">O canal de WhatsApp será ativado após a configuração do número de atendimento.</p>
-            )}
             <div className="contact-details">
               <div className="contact-detail">
                 <MapPin size={22} strokeWidth={1.35} />
@@ -281,7 +276,6 @@ export default function App() {
         </div>
         <div className="footer-bottom page-width">
           <span>© {new Date().getFullYear()} Arthur Ramalho. Todos os direitos reservados.</span>
-          <span className="footer-location">{siteConfig.city}</span>
           {siteConfig.oabNumber && <span>OAB: {siteConfig.oabNumber}</span>}
         </div>
       </footer>
