@@ -2412,100 +2412,245 @@ h2 em {
 }
 
 
-/* Ajustes finais e pontuais: cards de atuação, contato e rodapé.
-   Mantém Hero e Sobre sem alterações. */
-.practice .practice-card {
-  padding-top: 17px;
+/* AJUSTES FINAIS — somente cartões de atuação, contato e cabeçalho fixo */
+
+/* Mantém a navegação visível durante a rolagem da página. */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(7, 21, 34, .96);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .08);
 }
 
-.practice .practice-card .card-topline {
-  min-height: 38px;
-  margin-bottom: 4px;
+/* Compensa a altura do cabeçalho agora fixo, sem mudar a composição do Hero. */
+.hero {
+  padding-top: 96px;
 }
 
-.practice .practice-card h3 {
-  margin-top: 0;
-}
-
-.contact {
-  padding-top: 42px;
-  padding-bottom: 26px;
-}
-
-.contact-inner {
-  gap: 18px;
-}
-
-.contact-copy h2 {
-  margin-top: 12px;
-  margin-bottom: 0;
-}
-
-.contact-copy > p {
-  display: none;
-}
-
-.contact-actions {
-  padding-top: 0;
-}
-
-.contact-actions > .button {
-  margin-bottom: 18px;
-}
-
-.contact-details {
-  gap: 16px 28px;
-}
-
-.site-footer .footer-main {
-  padding-top: 20px;
-}
-
+/* Remove o espaço reservado à numeração e mantém o ícone no canto superior direito. */
 @media (max-width: 760px) {
+  .hero {
+    padding-top: 78px;
+  }
+
   .practice .practice-card,
   .practice .practice-card:nth-child(even) {
-    padding-top: 16px;
+    position: relative;
+    padding: 20px 19px 16px;
   }
 
   .practice .practice-card .card-topline {
-    min-height: 36px;
-    margin-bottom: 3px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    min-height: 0;
+    height: 42px;
+    margin: 0;
   }
 
   .practice .practice-card h3 {
-    margin-top: 0;
+    margin: 0 48px 9px 0;
+    padding-top: 3px;
   }
 
-  .contact {
-    padding-top: 30px;
-    padding-bottom: 20px;
-  }
-
-  .contact-inner {
-    gap: 17px;
-  }
-
-  .contact-copy h2 {
-    margin-top: 12px;
-    margin-bottom: 0;
+  /* Cria distância entre o botão de WhatsApp e os dados de contato. */
+  .contact-actions > .button {
+    margin-bottom: 18px;
   }
 
   .contact-actions {
     padding-top: 0;
   }
+}
+
+@media (min-width: 761px) {
+  .contact-actions > .button {
+    margin-bottom: 18px;
+  }
+}
+
+
+/* REFINO FINAL DE CONTEUDO E ESPACAMENTO — sem alterar o Hero aprovado */
+/* Cabeçalho opaco para não deixar o conteúdo da página transparecer durante a rolagem. */
+.site-header {
+  background: #071522;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* Reduz a distância entre o fim das áreas de atuação e o contato. */
+.practice {
+  padding-bottom: 42px;
+}
+
+/* Contato mais compacto e melhor conectado visualmente ao rodapé. */
+.contact {
+  padding-top: 48px;
+  padding-bottom: 30px;
+}
+
+.contact-copy > p {
+  max-width: 350px;
+}
+
+.contact-actions > .button {
+  margin-bottom: 22px;
+}
+
+.footer-main {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+@media (max-width: 760px) {
+  .practice {
+    padding-bottom: 36px;
+  }
+
+  .practice-heading {
+    margin-bottom: 22px;
+  }
+
+  .contact {
+    padding-top: 38px;
+    padding-bottom: 22px;
+  }
+
+  .contact-inner {
+    gap: 22px;
+  }
+
+  .contact-copy > p {
+    max-width: 330px;
+    line-height: 1.6;
+  }
 
   .contact-actions > .button {
-    width: 100%;
-    margin-bottom: 17px;
+    margin-bottom: 20px;
   }
 
   .contact-details {
-    gap: 15px;
+    gap: 16px;
   }
 
   .footer-main {
     gap: 14px;
-    padding-top: 19px;
+    padding-top: 22px;
     padding-bottom: 20px;
+  }
+}
+
+/* AJUSTES PONTUAIS SOLICITADOS — manter o restante do layout intacto */
+
+/* Cabeçalho acompanha a rolagem da página. */
+.site-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: #071522;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .08);
+}
+
+/* Linha dourada fina separando o contato do rodapé. */
+.site-footer {
+  border-top: 1px solid rgba(208, 161, 94, .55);
+}
+
+/* Remove o espaço vazio acima dos títulos dos cartões de atuação.
+   O ícone permanece no canto superior direito e não ocupa uma linha própria. */
+.practice .practice-card,
+.practice .practice-card:nth-child(even) {
+  position: relative;
+  padding-top: 22px !important;
+}
+
+.practice .practice-card .card-topline {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  min-height: 0 !important;
+  height: 42px;
+  margin: 0 !important;
+  padding: 0;
+}
+
+.practice .practice-card h3 {
+  margin: 0 52px 10px 0 !important;
+  padding: 0 !important;
+}
+
+/* Duas divisórias verticais douradas entre as três informações do Hero. */
+.hero-highlight {
+  position: relative;
+}
+
+.hero-highlight + .hero-highlight {
+  border-left: 1px solid rgba(208, 161, 94, .58);
+  padding-left: clamp(14px, 2vw, 28px);
+}
+
+@media (max-width: 760px) {
+  .practice .practice-card,
+  .practice .practice-card:nth-child(even) {
+    padding: 22px 19px 16px !important;
+  }
+
+  .practice .practice-card .card-topline {
+    top: 15px;
+    right: 15px;
+    height: 42px;
+  }
+
+  .practice .practice-card h3 {
+    margin: 0 50px 10px 0 !important;
+  }
+
+  /* Mantém as três informações lado a lado para que as divisórias sejam verticais. */
+  .hero-highlights {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px 0;
+  }
+
+  .hero-highlight {
+    min-width: 0;
+    align-items: flex-start;
+    gap: 7px;
+  }
+
+  .hero-highlight + .hero-highlight {
+    padding-left: 10px;
+  }
+
+  .hero-highlight svg {
+    flex: 0 0 18px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .hero-highlight span {
+    font-size: 8px;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-highlights {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .hero-highlight + .hero-highlight {
+    border-left: 0;
+    border-top: 1px solid rgba(208, 161, 94, .45);
+    padding: 12px 0 0;
   }
 }
