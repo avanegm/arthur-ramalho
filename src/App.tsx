@@ -145,7 +145,7 @@ export default function App() {
         <div className="hero-content page-width">
           <div className="hero-copy">
             <SectionEyebrow>Sorocaba e região</SectionEyebrow>
-            <h1>Direito com propósito e estratégia para <em>pessoas e empresas.</em></h1>
+            <h1>Direito com <em>propósito e estratégia.</em></h1>
             <p className="hero-description">
               Advocacia e consultoria jurídica com análise técnica, compromisso e soluções adequadas à realidade de cada cliente.
             </p>
