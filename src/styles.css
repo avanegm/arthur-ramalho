@@ -2473,3 +2473,74 @@ h2 em {
     margin-bottom: 18px;
   }
 }
+
+
+/* REFINO FINAL DE CONTEUDO E ESPACAMENTO — sem alterar o Hero aprovado */
+/* Cabeçalho opaco para não deixar o conteúdo da página transparecer durante a rolagem. */
+.site-header {
+  background: #071522;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+
+/* Reduz a distância entre o fim das áreas de atuação e o contato. */
+.practice {
+  padding-bottom: 42px;
+}
+
+/* Contato mais compacto e melhor conectado visualmente ao rodapé. */
+.contact {
+  padding-top: 48px;
+  padding-bottom: 30px;
+}
+
+.contact-copy > p {
+  max-width: 350px;
+}
+
+.contact-actions > .button {
+  margin-bottom: 22px;
+}
+
+.footer-main {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+@media (max-width: 760px) {
+  .practice {
+    padding-bottom: 36px;
+  }
+
+  .practice-heading {
+    margin-bottom: 22px;
+  }
+
+  .contact {
+    padding-top: 38px;
+    padding-bottom: 22px;
+  }
+
+  .contact-inner {
+    gap: 22px;
+  }
+
+  .contact-copy > p {
+    max-width: 330px;
+    line-height: 1.6;
+  }
+
+  .contact-actions > .button {
+    margin-bottom: 20px;
+  }
+
+  .contact-details {
+    gap: 16px;
+  }
+
+  .footer-main {
+    gap: 14px;
+    padding-top: 22px;
+    padding-bottom: 20px;
+  }
+}

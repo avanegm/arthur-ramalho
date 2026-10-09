@@ -141,9 +141,9 @@ export default function App() {
         <div className="hero-content page-width">
           <div className="hero-copy">
             <SectionEyebrow>Sorocaba e região</SectionEyebrow>
-            <h1>Direito com propósito e estratégia para <em>pessoas e empresas.</em></h1>
+            <h1>Estratégia jurídica para <em>decisões importantes.</em></h1>
             <p className="hero-description">
-              Advocacia e consultoria jurídica com análise técnica, compromisso e soluções adequadas à realidade de cada cliente.
+              Atuação jurídica para pessoas e empresas, com estratégia e responsabilidade.
             </p>
             <WhatsAppCta className="hero-cta" label="Falar agora no WhatsApp" />
           </div>
@@ -220,7 +220,6 @@ export default function App() {
               <SectionEyebrow>Áreas de atuação</SectionEyebrow>
               <h2>Atuação jurídica em <em>diferentes frentes.</em></h2>
             </div>
-            <p>Assessoria e atuação em demandas judiciais e extrajudiciais, com atenção à análise técnica e às alternativas adequadas à realidade de cada caso.</p>
           </div>
           <div className="practice-grid">
             {practiceAreas.map(({ title, description, Icon }) => (
@@ -244,7 +243,7 @@ export default function App() {
           <div className="contact-copy">
             <SectionEyebrow>Contato</SectionEyebrow>
             <h2>Vamos conversar sobre a<em> sua demanda?</em></h2>
-            <p>Entre em contato para apresentar sua questão e conhecer as possibilidades de atendimento.</p>
+            <p>Apresente sua questão e conheça os próximos passos.</p>
           </div>
           <div className="contact-actions">
             <WhatsAppCta label="Falar no WhatsApp" />
@@ -271,6 +270,7 @@ export default function App() {
       <footer className="site-footer">
         <div className="footer-main page-width">
           <Brand />
+          <p>Advocacia e consultoria jurídica<br />com seriedade, estratégia e responsabilidade.</p>
           <a href="#inicio" className="back-to-top">Voltar ao início <ArrowUpRight size={16} /></a>
         </div>
         <div className="footer-bottom page-width">
