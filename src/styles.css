@@ -1835,3 +1835,53 @@ h2 em {
   .about-quote { right: 18px; left: 18px; bottom: 62px; }
   .visual-caption { right: 18px; left: 18px; font-size: 7px; }
 }
+
+/* Ajuste fino mobile: a imagem nasce logo após as credenciais, com transição suave do creme para a fotografia */
+@media (max-width: 760px) {
+  .about-grid {
+    gap: 0;
+  }
+
+  .about-copy {
+    padding-bottom: 0;
+  }
+
+  .credentials {
+    margin-bottom: 0;
+  }
+
+  .about-visual {
+    margin-top: 0;
+    isolation: isolate;
+  }
+
+  .about-visual-shade {
+    background:
+      linear-gradient(
+        180deg,
+        var(--cream) 0%,
+        rgba(246, 242, 233, .94) 7%,
+        rgba(246, 242, 233, .62) 17%,
+        rgba(246, 242, 233, .12) 30%,
+        transparent 39%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(4, 16, 27, .02) 35%,
+        rgba(4, 16, 27, .24) 53%,
+        rgba(4, 16, 27, .94) 100%
+      );
+  }
+
+  .about-quote {
+    bottom: 66px;
+  }
+
+  .visual-caption {
+    bottom: 24px;
+  }
+}
+
+@media (max-width: 380px) {
+  .about-quote { bottom: 62px; }
+}
