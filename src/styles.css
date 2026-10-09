@@ -626,7 +626,7 @@ h2 em {
   overflow: hidden;
   color: #f5f0e7;
   background: var(--navy);
-  padding: 52px 0 67px;
+  padding: 70px 0 67px;
 }
 
 .contact-backdrop {
@@ -1116,7 +1116,7 @@ h2 em {
   }
 
   .contact {
-    padding: 38px 0 51px;
+    padding: 60px 0 51px;
   }
 
   .contact-inner {
@@ -2408,5 +2408,104 @@ h2 em {
 
   .practice .practice-card h3 {
     margin-top: 0;
+  }
+}
+
+
+/* Ajustes finais e pontuais: cards de atuação, contato e rodapé.
+   Mantém Hero e Sobre sem alterações. */
+.practice .practice-card {
+  padding-top: 17px;
+}
+
+.practice .practice-card .card-topline {
+  min-height: 38px;
+  margin-bottom: 4px;
+}
+
+.practice .practice-card h3 {
+  margin-top: 0;
+}
+
+.contact {
+  padding-top: 42px;
+  padding-bottom: 26px;
+}
+
+.contact-inner {
+  gap: 18px;
+}
+
+.contact-copy h2 {
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.contact-copy > p {
+  display: none;
+}
+
+.contact-actions {
+  padding-top: 0;
+}
+
+.contact-actions > .button {
+  margin-bottom: 18px;
+}
+
+.contact-details {
+  gap: 16px 28px;
+}
+
+.site-footer .footer-main {
+  padding-top: 20px;
+}
+
+@media (max-width: 760px) {
+  .practice .practice-card,
+  .practice .practice-card:nth-child(even) {
+    padding-top: 16px;
+  }
+
+  .practice .practice-card .card-topline {
+    min-height: 36px;
+    margin-bottom: 3px;
+  }
+
+  .practice .practice-card h3 {
+    margin-top: 0;
+  }
+
+  .contact {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+
+  .contact-inner {
+    gap: 17px;
+  }
+
+  .contact-copy h2 {
+    margin-top: 12px;
+    margin-bottom: 0;
+  }
+
+  .contact-actions {
+    padding-top: 0;
+  }
+
+  .contact-actions > .button {
+    width: 100%;
+    margin-bottom: 17px;
+  }
+
+  .contact-details {
+    gap: 15px;
+  }
+
+  .footer-main {
+    gap: 14px;
+    padding-top: 19px;
+    padding-bottom: 20px;
   }
 }
