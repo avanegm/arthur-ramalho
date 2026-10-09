@@ -21,28 +21,28 @@ import { getWhatsAppUrl, siteConfig } from './config';
 
 const practiceAreas = [
   {
-    number: '',
+    number: '01',
     title: 'Direito Bancário',
     description:
       'Atuação em defesa do consumidor em demandas bancárias, análise de contratos e questões relacionadas a cobranças.',
     Icon: Landmark,
   },
   {
-    number: '',
+    number: '02',
     title: 'Recuperação de Crédito',
     description:
       'Análise de alternativas jurídicas para recuperação de valores e condução de demandas de crédito.',
     Icon: Coins,
   },
   {
-    number: '',
+    number: '03',
     title: 'Direito do Trabalho',
     description:
       'Atuação em demandas trabalhistas, com experiência tanto pela parte reclamante quanto pela reclamada.',
     Icon: BriefcaseBusiness,
   },
   {
-    number: '',
+    number: '04',
     title: 'Transações Tributárias',
     description:
       'Acompanhamento de questões relacionadas a negociações tributárias e alternativas de regularização fiscal.',
@@ -143,6 +143,15 @@ export default function App() {
         </header>
 
         <div className="hero-content page-width">
+          <div className="hero-portrait" aria-hidden="true">
+            <div className="hero-portrait-frame" />
+
+            <img
+              src="/images/arthur-portrait.png"
+              alt=""
+            />
+          </div>
+
           <div className="hero-copy">
             <SectionEyebrow>Sorocaba e região</SectionEyebrow>
             <h1>Direito com propósito e estratégia para <em>pessoas e empresas.</em></h1>
@@ -150,28 +159,21 @@ export default function App() {
               Advocacia e consultoria jurídica com análise técnica, compromisso e soluções adequadas à realidade de cada cliente.
             </p>
             <WhatsAppCta className="hero-cta" label="Falar agora no WhatsApp" />
-          </div>
-
-          <div className="hero-portrait" aria-hidden="true">
-            <div className="hero-portrait-frame" />
-            <img src="/images/arthur-portrait.png" alt="" />
-          </div>
-
-          <div className="hero-highlights" aria-label="Informações de atendimento">
-            <div className="hero-highlight">
-              <ShieldCheck size={27} strokeWidth={1.25} />
-              <span>Atendimento<br /><strong>em Sorocaba e região</strong></span>
-            </div>
-            <div className="hero-highlight">
-              <UsersRound size={27} strokeWidth={1.25} />
-              <span>Pessoas físicas<br /><strong>e empresas</strong></span>
-            </div>
-            <div className="hero-highlight">
-              <BriefcaseBusiness size={26} strokeWidth={1.25} />
-              <span>Análise técnica<br /><strong>e individualizada</strong></span>
+            <div className="hero-highlights" aria-label="Informações de atendimento">
+              <div className="hero-highlight">
+                <ShieldCheck size={27} strokeWidth={1.25} />
+                <span>Atendimento<br /><strong>em Sorocaba e região</strong></span>
+              </div>
+              <div className="hero-highlight">
+                <UsersRound size={27} strokeWidth={1.25} />
+                <span>Pessoas físicas<br /><strong>e empresas</strong></span>
+              </div>
+              <div className="hero-highlight">
+                <BriefcaseBusiness size={26} strokeWidth={1.25} />
+                <span>Análise técnica<br /><strong>e individualizada</strong></span>
+              </div>
             </div>
           </div>
-
           <a className="hero-scroll" href="#sobre" aria-label="Conheça o profissional">
             <span>Conheça o profissional</span><ArrowDownRight size={16} />
           </a>
@@ -189,27 +191,26 @@ export default function App() {
             <p>
               Possui experiências relacionadas ao Direito Bancário em defesa do consumidor, Recuperação de Crédito, Direito do Trabalho — tanto pela parte reclamante quanto pela reclamada — e Transações Tributárias, com foco em uma atuação técnica, responsável e atenta às particularidades de cada demanda.
             </p>
-            <div className="credentials" aria-label="Formação acadêmica e complementar">
+            <div className="credentials">
               <div className="credential">
-                <span className="credential-icon"><GraduationCap size={25} strokeWidth={1.35} /></span>
-                <span className="credential-copy"><small>Graduação</small><strong>Direito</strong><span>FADI · 2026</span></span>
+                <GraduationCap size={25} strokeWidth={1.35} />
+                <span>Graduado em Direito<br /><strong>FADI · 2026</strong></span>
               </div>
               <div className="credential">
-                <span className="credential-icon"><BookOpen size={24} strokeWidth={1.35} /></span>
-                <span className="credential-copy"><small>Pós-graduação em andamento</small><strong>Processo do Trabalho</strong><span>Escola Paulista de Direito (EPD)</span></span>
+                <BookOpen size={24} strokeWidth={1.35} />
+                <span>Pós-graduação em andamento<br /><strong>Processo do Trabalho · EPD</strong></span>
               </div>
               <div className="credential">
-                <span className="credential-icon"><Check size={23} strokeWidth={1.45} /></span>
-                <span className="credential-copy"><small>Formação complementar</small><strong>Cursos ao longo da graduação</strong><span>Aprimoramento contínuo</span></span>
+                <Check size={23} strokeWidth={1.45} />
+                <span>Formação complementar<br /><strong>Cursos ao longo da graduação</strong></span>
               </div>
             </div>
           </div>
           <div className="about-visual">
             <img src="/images/office-detail.jpg" alt="Ambiente de trabalho com livros jurídicos e mesa de escritório" loading="lazy" />
-            <div className="about-visual-shade" aria-hidden="true" />
             <div className="about-quote">
               <span className="quote-mark" aria-hidden="true">“</span>
-              <p>Cada demanda merece uma análise cuidadosa, com <em>estratégia e responsabilidade.</em></p>
+              <p>Cada demanda merece uma análise cuidadosa, com estratégia e responsabilidade.</p>
               <span className="quote-rule" />
             </div>
             <div className="visual-caption"><span>01</span><span>Conhecimento aplicado à realidade</span></div>
@@ -238,7 +239,7 @@ export default function App() {
               </article>
             ))}
           </div>
-          <p className="practice-note">A atuação em cada matéria será avaliada de acordo com as características e necessidades específicas da demanda.</p>
+          <p className="practice-note">A estratégia jurídica é definida após a análise individual dos fatos, documentos e objetivos de cada caso.</p>
         </div>
       </section>
 

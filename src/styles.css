@@ -2158,3 +2158,175 @@ h2 em {
     bottom: 17px;
   }
 }
+
+
+/* Refinamento da seção Áreas de Atuação: hierarquia, cards e espaçamento */
+.practice {
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.practice-heading {
+  gap: 42px;
+  margin-bottom: 30px;
+}
+
+.practice-heading .section-eyebrow {
+  margin-bottom: 18px;
+}
+
+.practice-grid {
+  gap: 0;
+  border-top: 1px solid rgba(21, 31, 44, .14);
+  border-left: 0;
+}
+
+.practice-card {
+  min-height: 270px;
+  padding: 26px 23px 21px;
+  border-left: 1px solid rgba(21, 31, 44, .12);
+  background: rgba(255, 255, 255, .14);
+}
+
+.practice-card:nth-child(even) {
+  background: rgba(255, 255, 255, .28);
+}
+
+.card-topline > span {
+  color: #a97837;
+  font-size: 10px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: .16em;
+}
+
+.practice-card h3 {
+  margin-top: 24px;
+  font-size: clamp(21px, 1.8vw, 25px);
+  line-height: 1.12;
+}
+
+.practice-card > p {
+  font-size: 12px;
+  line-height: 1.75;
+}
+
+.card-link {
+  padding-top: 17px;
+  border-top: 1px solid rgba(21, 31, 44, .10);
+  font-size: 10px;
+  letter-spacing: .12em;
+}
+
+.practice-note {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 720px;
+  margin: 22px 0 0;
+  padding: 15px 17px;
+  border-left: 2px solid #b58340;
+  background: rgba(255, 255, 255, .26);
+  color: #626872;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+@media (max-width: 760px) {
+  .about { padding-bottom: 0 !important; }
+
+  .practice {
+    margin-top: 0;
+    padding: 28px 0 42px !important;
+    border-top: 1px solid rgba(30, 40, 50, .055);
+  }
+
+  .practice-heading {
+    gap: 13px;
+    margin-bottom: 23px;
+  }
+
+  .practice-heading .section-eyebrow {
+    margin-bottom: 13px;
+  }
+
+  .practice-heading h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: clamp(38px, 9.6vw, 48px);
+    line-height: 1.04;
+    letter-spacing: -.035em;
+  }
+
+  .practice-heading > p {
+    max-width: 480px;
+    margin-top: 2px;
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .practice-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 11px;
+    border: 0;
+  }
+
+  .practice-card,
+  .practice-card:nth-child(even) {
+    min-height: 0;
+    padding: 20px 19px 16px;
+    border: 1px solid rgba(21, 31, 44, .13);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, .23);
+    box-shadow: 0 5px 18px rgba(20, 31, 42, .025);
+    transform: none;
+  }
+
+  .card-topline {
+    min-height: 26px;
+  }
+
+  .card-topline > span {
+    font-size: 10px;
+    letter-spacing: .18em;
+  }
+
+  .card-topline svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .practice-card h3 {
+    margin: 14px 0 9px;
+    font-size: clamp(23px, 6vw, 27px);
+    line-height: 1.12;
+  }
+
+  .practice-card > p {
+    max-width: none;
+    margin-bottom: 13px;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  .card-link {
+    padding-top: 12px;
+    border-top: 1px solid rgba(21, 31, 44, .10);
+    font-size: 10px;
+  }
+
+  .practice-note {
+    gap: 0;
+    margin-top: 17px;
+    padding: 13px 14px;
+    font-size: 11px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 380px) {
+  .practice { padding-top: 24px !important; padding-bottom: 34px !important; }
+  .practice-card,
+  .practice-card:nth-child(even) { padding: 18px 16px 14px; }
+  .practice-heading h2 { font-size: 37px; }
+}
