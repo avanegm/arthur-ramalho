@@ -21,28 +21,24 @@ import { getWhatsAppUrl, siteConfig } from './config';
 
 const practiceAreas = [
   {
-    number: '01',
     title: 'Direito Bancário',
     description:
       'Atuação em defesa do consumidor em demandas bancárias, análise de contratos e questões relacionadas a cobranças.',
     Icon: Landmark,
   },
   {
-    number: '02',
     title: 'Recuperação de Crédito',
     description:
       'Análise de alternativas jurídicas para recuperação de valores e condução de demandas de crédito.',
     Icon: Coins,
   },
   {
-    number: '03',
     title: 'Direito do Trabalho',
     description:
       'Atuação em demandas trabalhistas, com experiência tanto pela parte reclamante quanto pela reclamada.',
     Icon: BriefcaseBusiness,
   },
   {
-    number: '04',
     title: 'Transações Tributárias',
     description:
       'Acompanhamento de questões relacionadas a negociações tributárias e alternativas de regularização fiscal.',
@@ -227,9 +223,9 @@ export default function App() {
             <p>Assessoria e atuação em demandas judiciais e extrajudiciais, com atenção à análise técnica e às alternativas adequadas à realidade de cada caso.</p>
           </div>
           <div className="practice-grid">
-            {practiceAreas.map(({ number, title, description, Icon }) => (
-              <article className="practice-card" key={number}>
-                <div className="card-topline"><span>{number}</span><Icon size={27} strokeWidth={1.35} /></div>
+            {practiceAreas.map(({ title, description, Icon }) => (
+              <article className="practice-card" key={title}>
+                <div className="card-topline"><span className="practice-icon-wrap"><Icon size={25} strokeWidth={1.45} /></span></div>
                 <h3>{title}</h3>
                 <p>{description}</p>
                 <a href="#contato" className="card-link" aria-label={`Conversar sobre ${title}`}>

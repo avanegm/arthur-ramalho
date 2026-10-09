@@ -2327,3 +2327,53 @@ h2 em {
   .practice-card:nth-child(even) { padding: 18px 16px 14px; }
   .practice-heading h2 { font-size: 37px; }
 }
+
+
+/* Refinamento pontual: áreas sem numeração e ícones com acabamento editorial. */
+.practice-card .card-topline {
+  min-height: 44px;
+  justify-content: flex-end;
+}
+
+.practice-card .card-topline > .practice-icon-wrap {
+  display: inline-flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(181, 131, 64, .28);
+  border-radius: 50%;
+  background: rgba(181, 131, 64, .075);
+  color: #a97837;
+  transition: background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.practice-card:hover .card-topline > .practice-icon-wrap {
+  background: rgba(181, 131, 64, .13);
+  border-color: rgba(181, 131, 64, .48);
+  transform: translateY(-2px);
+}
+
+.practice-card h3 {
+  margin-top: 12px;
+}
+
+@media (max-width: 760px) {
+  .practice-card .card-topline {
+    min-height: 42px;
+  }
+
+  .practice-card .card-topline > .practice-icon-wrap {
+    width: 42px;
+    height: 42px;
+  }
+
+  .practice-card .card-topline > .practice-icon-wrap svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .practice-card h3 {
+    margin-top: 9px;
+  }
+}
