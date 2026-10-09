@@ -141,9 +141,9 @@ export default function App() {
         <div className="hero-content page-width">
           <div className="hero-copy">
             <SectionEyebrow>Sorocaba e região</SectionEyebrow>
-            <h1>Estratégia jurídica para <em>decisões importantes.</em></h1>
+            <h1>Segurança jurídica para <em>decisões importantes.</em></h1>
             <p className="hero-description">
-              Atuação jurídica para pessoas e empresas, com estratégia e responsabilidade.
+              Assessoria jurídica para pessoas e empresas, com análise individualizada.
             </p>
             <WhatsAppCta className="hero-cta" label="Falar agora no WhatsApp" />
           </div>
@@ -242,8 +242,7 @@ export default function App() {
         <div className="contact-inner page-width">
           <div className="contact-copy">
             <SectionEyebrow>Contato</SectionEyebrow>
-            <h2>Vamos conversar sobre a<em> sua demanda?</em></h2>
-            <p>Apresente sua questão e conheça os próximos passos.</p>
+            <h2>Seu caso merece <em> atenção</em></h2>
           </div>
           <div className="contact-actions">
             <WhatsAppCta label="Falar no WhatsApp" />
